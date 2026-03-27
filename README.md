@@ -16,11 +16,11 @@ RAG_for_Resumes/
 │   ├── index.faiss       # Persisted FAISS vector index
 │   └── metadata.json     # Chunk to resume mapping
 │
-├── src/
-│   ├── ingest.py         # Extracts, chunks, embeds, and saves index
-│   ├── retriever.py      # Loads index and retrieves relevant chunks
-│   └── generator.py      # Builds prompt and calls Groq LLM
+├── demo_images/          # Screenshots of the system in action
 │
+├── ingest.py             # Extracts, chunks, embeds, and saves index
+├── retriever.py          # Loads index and retrieves relevant chunks
+├── generator.py          # Builds prompt and calls Groq LLM
 ├── main.py               # CLI entry point
 ├── .env                  # API keys (not committed)
 ├── .gitignore
@@ -34,7 +34,7 @@ RAG_for_Resumes/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/RAG_for_Resumes.git
+git clone https://github.com/MujahidMalik7/RAG_for_Resumes.git
 cd RAG_for_Resumes
 ```
 
@@ -127,3 +127,56 @@ sentence-transformers
 groq
 python-dotenv
 ```
+
+---
+
+## Demo
+
+All queries below were run against 15 real-world resumes from different fields.
+
+### Best candidate for a machine learning role
+The system compared candidates and recommended Rabail Waqar for her deeper focus on transformer-based models and NLP, while noting Mujahid Tufail as a strong alternative for broader AI/ML work.
+
+![Machine Learning Query](demo_images/demo.png)
+
+---
+
+### Candidates with mobile app development experience
+Retrieved Fatima Idrees as the relevant candidate based on her Android Studio experience.
+
+![Mobile App Development](demo_images/demo1.png)
+
+---
+
+### Full stack developer with React frontend and Python backend
+The system correctly declined to recommend any candidate, honestly stating that none of the retrieved profiles mentioned Python backend experience.
+
+![Full Stack Query](demo_images/demo2.png)
+
+---
+
+### Candidate with both AI and mobile development skills
+Identified Rubab Talha as the best fit, citing her experience with TensorFlow, Keras, OpenAI API, and Android SDK with Kotlin.
+
+![AI and Mobile Development](demo_images/demo3.png)
+
+---
+
+### Frontend developer with UI/UX design skills for a startup
+Recommended Hasnain Iqbal based on his frontend stack and ability to work independently, while comparing against Fatima Idrees and Barira Maheen.
+
+![Frontend and UI/UX Query](demo_images/demo4.png)
+
+---
+
+### Ranking all candidates by AI and machine learning experience
+Ranked Muhammad Mujahid Tufail first for RAG and LLM experience, Rabail Waqar second for NLP and transformer expertise, and correctly identified M. Faizan as having no AI experience.
+
+![AI Ranking Query](demo_images/demo5.png)
+
+---
+
+### Candidates with more than 2 years of development experience
+The system gave a nuanced answer — identifying likely candidates while being transparent that exact years were not always explicitly stated in the resumes.
+
+![Experience Query](demo_images/demo6.png)

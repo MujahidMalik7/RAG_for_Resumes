@@ -9,7 +9,7 @@ index = faiss.read_index("storage/index.faiss")
 with open ("storage/metadata.json", "r") as f:
     metadata = json.load(f)
 
-def retrieve(query, k=3):
+def retrieve(query, k=5):
     
     query_vector = model.encode([query]).astype("float32")
     distances, indices = index.search(query_vector, k)

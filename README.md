@@ -141,13 +141,6 @@ The system compared candidates and recommended Rabail Waqar for her deeper focus
 
 ---
 
-### Candidates with mobile app development experience
-Retrieved Fatima Idrees as the relevant candidate based on her Android Studio experience.
-
-![Mobile App Development](demo_images/demo1.png)
-
----
-
 ### Full stack developer with React frontend and Python backend
 The system correctly declined to recommend any candidate, honestly stating that none of the retrieved profiles mentioned Python backend experience.
 
